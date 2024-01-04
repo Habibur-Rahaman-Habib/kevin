@@ -1,0 +1,62 @@
+.footer_contact {
+  border-radius: 25px 25px 0 0;
+}
+.footer_bottom {
+  h1 {
+    font-size: 210px;
+    @include screen-1400 {
+      font-size: 160px;
+    }
+    @include screen-1199 {
+      font-size: 140px;
+    }
+    @include screen-992 {
+      font-size: 110px;
+    }
+    @include screen-768 {
+      font-size: 80px;
+    }
+    @include screen-575 {
+      font-size: 60px;
+    }
+    @include screen-400 {
+      font-size: 40px;
+    }
+  }
+}
+
+.copyright {
+  ul {
+    li {
+      &:hover {
+        a {
+          h6 {
+            color: var(--orange);
+          }
+        }
+      }
+    }
+  }
+}
+
+/*****  scroll to top *****/
+.scroll-top-btn {
+  width: 45px;
+  height: 50px;
+  background-color: var(--muddy);
+  color: var(--dark);
+  border-radius: 4px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 10;
+  font-size: 15px;
+  font-weight: 500;
+  transition: var(--transition);
+  &:hover {
+    transform: translateY(-5px);
+    i {
+      animation: 0.4s toTopFromBottom forwards;
+    }
+  }
+}

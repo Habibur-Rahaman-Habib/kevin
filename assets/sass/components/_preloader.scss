@@ -1,0 +1,69 @@
+/******************** preloader ******************/
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--dark);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 99;
+}
+
+#bars6 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#bars6 span {
+  position: absolute;
+  display: block;
+  animation: bars6 1.5s infinite ease-in-out;
+  bottom: 10px;
+  width: 17px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+#bars6 span:nth-child(2) {
+  left: 20px;
+  animation-delay: 0.2s;
+}
+
+#bars6 span:nth-child(3) {
+  left: 40px;
+  animation-delay: 0.4s;
+}
+
+#bars6 span:nth-child(4) {
+  left: 60px;
+  animation-delay: 0.6s;
+}
+
+#bars6 span:nth-child(5) {
+  left: 80px;
+  animation-delay: 0.8s;
+}
+
+@keyframes bars6 {
+  0%,
+  100%,
+  50% {
+    height: 10px;
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  25% {
+    height: 60px;
+    transform: translateY(15px);
+    background: white;
+  }
+}
