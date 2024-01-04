@@ -1,13 +1,14 @@
 body {
   margin: 0;
-  font-family: var(--inter);
+  padding: 0;
+  font-family: var(--kanit);
 }
 
-.container-fluid {
-  width: 1600px;
-  margin: auto;
-  max-width: 100%;
-}
+// .container-fluid {
+//   width: 1600px;
+//   margin: auto;
+//   max-width: 100%;
+// }
 
 input {
   outline: none;

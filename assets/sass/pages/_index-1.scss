@@ -1,32 +1,4 @@
-/***** Banner part ******/
-.hire_downlaod {
-  .white.fsb {
-    transition: var(--transition);
-    &:hover {
-      color: var(--orange);
-    }
-    span {
-      width: 45px;
-      height: 60px;
-      border-radius: 6px;
-      background: white;
-      display: inline-block;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--dark);
-      margin-right: 10px;
-      font-weight: 600;
-      font-size: 18px;
-      i {
-        animation: 1s hire infinite;
-      }
-    }
-  }
-  .default-btn1 {
-    padding: 18px 36px;
-  }
-}
+/***** about part ******/
 
 /***** service part ******/
 .service_item {

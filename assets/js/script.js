@@ -31,9 +31,9 @@
     });
 
     //2. Preloader
-    setTimeout(() => {
-        $('.preloader').fadeOut()
-    }, 2000);
+    // setTimeout(() => {
+    //     $('.preloader').fadeOut()
+    // }, 2000);
 
     // 3. page  slider
 
