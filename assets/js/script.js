@@ -38,54 +38,24 @@
     // 3. page  slider
 
     /********* Testimonial  slider **************/
-    $(".blog_img_slider").slick({
-        slidesToShow: 1,
-        asNavFor: ".blog_content_slider",
-        arrows: true,
-        prevArrow: '<button class="prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
-        nextArrow: '<button class="next-arrow"><i class="fa-solid fa-chevron-right"></i></button>',
-        dots: true,
-        dotsClass: 'slider-paging-number',
-        customPaging: function (slick, index) {
-            return (index + 1) + ' ' + '/' + slick.slideCount;
-        }
-    })
-        .on('afterChange', function (event, slick, currentSlide) {
-            $(this).find('*[role="tablist"]').find('li').eq(0).text(slick.options.customPaging.call(this, slick, currentSlide));
-
-        });
-
-
-
-    $(".blog_content_slider").slick({
-        slidesToShow: 5,
-        focusOnSelect: true,
+    $(".testi_wrap").slick({
+        slidesToShow: 2,
         arrows: false,
-        asNavFor: ".blog_img_slider",
-        centerMode: true,
+        dots: true,
+        customPaging: function (slider, i) {
+            return '<span></span>';
+        },
         responsive: [
             {
-                breakpoint: 1400,
+                breakpoint: 992,
                 settings: {
-                    slidesToShow: 4,
-                }
-            },
-            {
-                breakpoint: 450,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 350,
-                settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                 }
             },
 
         ]
-    });
 
+    });
 
     /********* brand slider **************/
     $(".brand_slider").slick({
@@ -111,10 +81,71 @@
                 settings: {
                     slidesToShow: 2,
                 }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                }
             }
 
         ]
     });
+
+    /********* blog slider **************/
+    $(".blog_slider").slick({
+        slidesToShow: 3,
+        arrows: true,
+        slidesToScroll: 1,
+        prevArrow: '<button class="prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow: '<button class="next-arrow"><i class="fa-solid fa-chevron-right"></i></button>',
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+
+        ]
+    });
+
+    /********* Get in slider **************/
+    $(".get_slider").slick({
+        slidesToShow: 4,
+        arrows: false,
+        slidesToScroll: 1,
+        dots: false,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+
+        ]
+    });
+
 
 
     //4. Fancybox

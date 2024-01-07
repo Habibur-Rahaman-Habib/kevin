@@ -1,44 +1,22 @@
-.footer_contact {
-  border-radius: 25px 25px 0 0;
-}
-.footer_bottom {
-  h1 {
-    font-size: 210px;
-    @include screen-1400 {
-      font-size: 160px;
-    }
-    @include screen-1199 {
-      font-size: 140px;
-    }
-    @include screen-992 {
-      font-size: 110px;
-    }
-    @include screen-768 {
-      font-size: 80px;
-    }
-    @include screen-575 {
-      font-size: 60px;
-    }
-    @include screen-400 {
-      font-size: 40px;
-    }
+/*****  footer part *****/
+.get_slider {
+  border-color: #323232 !important;
+  b {
+    color: white;
+    font-size: 52px;
   }
-}
-
-.copyright {
-  ul {
-    li {
-      &:hover {
-        a {
-          h6 {
-            color: var(--orange);
-          }
-        }
+  .slick-slide {
+    b {
+      text-align: center;
+    }
+    &:nth-child(even) {
+      b {
+        -webkit-text-stroke: 1px white;
+        color: transparent;
       }
     }
   }
 }
-
 /*****  scroll to top *****/
 .scroll-top-btn {
   width: 45px;

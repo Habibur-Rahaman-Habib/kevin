@@ -26,16 +26,3 @@
     }
   }
 }
-
-.process_step {
-  h3 {
-    -webkit-text-stroke: 1px var(--dark);
-    color: transparent;
-  }
-  span {
-    width: 85px;
-    height: 2px;
-    background: var(--dark);
-    margin-bottom: 6px;
-  }
-}

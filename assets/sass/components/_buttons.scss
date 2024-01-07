@@ -28,6 +28,34 @@
   }
 }
 
+.white_btn {
+  color: var(--dark);
+  background-image: linear-gradient(30deg, white 50%, transparent 50%);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  transition: background 300ms ease-in-out;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 18px;
+  padding: 13px 34px;
+  border-radius: 10px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  &:hover {
+    border: 1px solid var(--orange);
+    color: var(--white);
+    background-position: 100%;
+    background-color: transparent;
+  }
+  img {
+    display: inline-block;
+    margin-top: -3px;
+    margin-left: 5px;
+  }
+}
+
 /****** btn design end ******/
 
 /****** btn design ******/
