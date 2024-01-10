@@ -102,6 +102,13 @@ p {
   background: var(--dark);
 }
 
+.dark_bg1 {
+  background: url("../images/banner/bg4.jpg") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+}
+
 .orange {
   color: var(--orange);
 }
@@ -133,22 +140,42 @@ p {
 
 /******** custom class ********/
 .b {
-  border: 1px solid #f3f3f3;
+  border: 1px solid #d9d9d9;
 }
 
 .bb {
-  border-bottom: 1px solid #f3f3f3;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .bt {
-  border-top: 1px solid #f3f3f3;
+  border-top: 1px solid #d9d9d9;
 }
 
 .bl {
-  border-left: 1px solid #f3f3f3;
+  border-left: 1px solid #d9d9d9;
 }
 .br {
-  border-right: 1px solid #f3f3f3;
+  border-right: 1px solid #d9d9d9;
+}
+
+.bor {
+  border: 1px solid #323232;
+}
+
+.bor_l {
+  border-left: 1px solid #323232;
+}
+
+.bor_r {
+  border-right: 1px solid #323232;
+}
+
+.bor_t {
+  border-top: 1px solid #323232;
+}
+
+.bor_b {
+  border-bottom: 1px solid #323232;
 }
 
 .italic {
@@ -178,6 +205,7 @@ p {
   img {
     transform: scale(1.1);
     transition: var(--transition);
+    width: 100%;
   }
 }
 

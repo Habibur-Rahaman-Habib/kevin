@@ -146,6 +146,31 @@
         ]
     });
 
+    /********* records slider **************/
+    $(".record_slider").slick({
+        slidesToShow: 3,
+        arrows: false,
+        slidesToScroll: 1,
+        dots: false,
+        autoplay: true,
+        centerMode: true,
+        responsive: [
+            {
+                breakpoint: 1240,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+
+        ]
+    });
+
 
 
     //4. Fancybox

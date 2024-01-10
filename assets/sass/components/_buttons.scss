@@ -20,11 +20,21 @@
     color: var(--dark);
     background-position: 100%;
     background-color: transparent;
+    span {
+      svg {
+        path {
+          fill: var(--dark);
+        }
+      }
+    }
   }
-  img {
+  span {
     display: inline-block;
-    margin-top: -3px;
     margin-left: 5px;
+    svg {
+      margin-top: -3px;
+      transition: var(--transition);
+    }
   }
 }
 
@@ -40,19 +50,29 @@
   display: inline-block;
   font-size: 18px;
   padding: 13px 34px;
-  border-radius: 10px;
+  border-radius: 15px;
   font-weight: 500;
-  border: 1px solid transparent;
+  border: 1px solid white;
   &:hover {
     border: 1px solid var(--orange);
     color: var(--white);
     background-position: 100%;
     background-color: transparent;
+    span {
+      svg {
+        path {
+          fill: var(--white);
+        }
+      }
+    }
   }
-  img {
+  span {
     display: inline-block;
-    margin-top: -3px;
     margin-left: 5px;
+    svg {
+      margin-top: -3px;
+      transition: var(--transition);
+    }
   }
 }
 

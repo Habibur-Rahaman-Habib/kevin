@@ -180,6 +180,142 @@ h4[data-value]:after {
 }
 
 /***** portfolio part ******/
+.vmp_btn {
+  padding: 15px 25px;
+  text-transform: capitalize;
+  background-size: 550px;
+}
+.portfolio_button {
+  width: 700px;
+  border-radius: 10px;
+  margin: auto;
+  max-width: 100%;
+  padding: 10px;
+  text-align: center;
+  button {
+    color: var(--dark);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 7px;
+    transition: var(--transition);
+    & + button {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 85%;
+        background: #e7e7e7;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @include screen-768 {
+          display: none;
+        }
+      }
+    }
+    &:hover {
+      color: var(--white);
+      background: var(--orange);
+    }
+    &.active {
+      color: var(--white);
+      background: var(--orange);
+    }
+  }
+}
+
+.portfolio_item {
+  background: var(--dark);
+  height: 565px;
+  position: relative;
+  @include screen-1199 {
+    height: 500px;
+  }
+  @include screen-992 {
+    height: 450px;
+  }
+  @include screen-400 {
+    height: 400px;
+  }
+  @media (max-width: 350px) {
+    height: 350px;
+  }
+  @media (max-width: 300px) {
+    height: 300px;
+  }
+  &:hover {
+    .imgs {
+      height: 83%;
+    }
+  }
+  .imgs {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    transition: 0.3s all linear;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+    }
+  }
+  .por_content {
+    position: absolute;
+    bottom: 6%;
+    left: 6%;
+    max-width: 88%;
+    @include screen-1199 {
+      bottom: 6%;
+      left: 6%;
+    }
+    @include screen-768 {
+      bottom: 3%;
+      left: 3%;
+    }
+    &:hover {
+      h4 {
+        color: var(--orange);
+      }
+      span {
+        i {
+          color: var(--orange);
+          animation: 0.4s toTopFromBottom1 forwards;
+        }
+      }
+    }
+    h4 {
+      padding: 14px 25px;
+      @include screen-1199 {
+        padding: 12px;
+        margin-right: 7px !important;
+      }
+      @media (min-width: 768px) and (max-width: 992px) {
+        font-size: 16px;
+      }
+      @media (min-width: 200px) and (max-width: 400px) {
+        font-size: 15px;
+      }
+    }
+    span {
+      width: 69px;
+      height: 69px;
+      border-radius: 50%;
+      font-size: 30px;
+      transition: var(--transition);
+      overflow: hidden;
+      @include screen-1199 {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+      }
+      i {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
 
 /***** Testimonial part ******/
 .testi_wrap {
@@ -303,6 +439,10 @@ h4[data-value]:after {
   background: url("../images/banner/bg1.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+  .hand {
+    bottom: 0;
+    left: 0;
+  }
 }
 .hire_downlaod {
   .white.fsb {
@@ -341,9 +481,95 @@ h4[data-value]:after {
     transform: translateX(0px);
   }
 }
+.bdm {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: end;
+  a {
+    width: 245px;
+    height: 60px;
+    border-radius: 10px;
+    background: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+    color: var(--dark);
+    font-weight: 600;
+    img {
+      transition: var(--transition);
+    }
+    &:hover img {
+      padding-left: 10px;
+    }
+    &.behance {
+      animation: move 6s infinite linear;
+    }
+    &.dribble {
+      animation: move1 6s infinite linear;
+    }
+    &.message {
+      animation: move 6s infinite linear;
+    }
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateX(0px);
+  }
+
+  25% {
+    transform: translateX(-20px);
+  }
+
+  55% {
+    transform: translateX(0px);
+  }
+
+  75% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes move1 {
+  0% {
+    transform: translateX(0px);
+  }
+
+  25% {
+    transform: translateX(10px);
+  }
+
+  55% {
+    transform: translateX(0px);
+  }
+
+  75% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.wedo_right {
+  .what {
+    left: 39%;
+    bottom: -1px;
+    transform: translateX(-50%);
+    width: 540px;
+  }
+}
 
 /***** blog part ******/
-
 .blog_single {
   border: 1.5px solid white;
   &:hover {
