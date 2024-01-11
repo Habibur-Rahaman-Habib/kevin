@@ -181,7 +181,7 @@
     new WOW().init();
 
     // 6. filter
-    /******* home page 2 filter ******/
+    /******* home page filter ******/
     var $grid = $('.portfolio_item_active').isotope({
         itemSelector: '.grid-item',
         percentPosition: true,
@@ -202,14 +202,14 @@
 
 
     /******* blog page filter ******/
-    $('.portfolio_button2').on('click', 'button', function () {
+    $('.blog_button').on('click', 'button', function () {
         var filterValue = $(this).attr('data-filter');
         $grid.isotope({ filter: filterValue });
     });
 
-    $(".portfolio_button2 button").each(function () {
+    $(".blog_button button").each(function () {
         $(this).on("click", function () {
-            $(this).parents(".portfolio_button2").find("button.active").removeClass("active");
+            $(this).parents(".blog_button").find("button.active").removeClass("active");
             $(this).addClass("active");
         });
     });

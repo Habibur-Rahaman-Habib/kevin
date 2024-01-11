@@ -1,20 +1,82 @@
-.blog_pagi {
-  background: #ffffff87;
-  li {
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--dark);
-    color: var(--white);
+.blog_button {
+  button {
+    color: var(--dark);
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
+    border-radius: 7px;
     transition: var(--transition);
+    & + button {
+      padding: 0px 30px;
+      position: relative;
+      @include screen-768 {
+        padding: 10px;
+      }
+      @include screen-575 {
+        padding: 3px 7px;
+      }
+      &::before {
+        content: "/";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--dark);
+        @include screen-768 {
+          display: none;
+        }
+      }
+    }
     &:hover {
-      background: var(--orange);
+      color: var(--orange);
     }
     &.active {
+      color: var(--orange);
+    }
+  }
+}
+
+.blog_pagi {
+  li {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--offwhite);
+    color: var(--dark);
+    font-size: 22px;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 1px solid white;
+    @include screen-1199 {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+    }
+    &:hover {
       background: var(--orange);
+      color: var(--white);
+    }
+    &.active {
+      color: var(--white);
+      background: var(--orange);
+    }
+  }
+}
+
+.blog_src {
+  form {
+    input {
+      padding: 18px 33px;
+      @include screen-1199 {
+        padding: 15px 30px;
+      }
+    }
+    button {
+      right: 28px;
+      color: #a1a1a1;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
     }
   }
 }
@@ -135,7 +197,6 @@
 
 /********* blog details page **********/
 .quote {
-  box-shadow: -8px 8px 0px var(--orange);
   h6 {
     span {
       width: 34px;
