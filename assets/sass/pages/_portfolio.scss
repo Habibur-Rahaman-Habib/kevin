@@ -1,0 +1,59 @@
+/****** portfolio details page *****/
+.port_del {
+  img {
+    border-radius: 15px 15px 0 0;
+  }
+  .pro_details {
+    border-radius: 0 0 15px 15px;
+    justify-content: space-between;
+    @include screen-992 {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include screen-768 {
+      justify-content: start;
+    }
+    .pro_item {
+      padding: 30px 50px;
+      @include screen-1400 {
+        padding: 30px;
+      }
+      @include screen-1199 {
+        padding: 15px;
+      }
+      @include screen-992 {
+        border: 1px solid #d9d9d9;
+      }
+      @include screen-768 {
+        border: 0;
+      }
+      ul {
+        li {
+          &:hover {
+            a {
+              color: var(--orange);
+            }
+          }
+          a {
+            color: var(--dark);
+            transition: var(--transition);
+          }
+        }
+      }
+    }
+  }
+}
+
+.about_project {
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      i {
+        color: var(--orange);
+        font-size: 9px;
+      }
+    }
+  }
+}

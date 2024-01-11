@@ -81,6 +81,18 @@
   }
 }
 
+.contact_box {
+  .footer_right {
+    form {
+      button {
+        background-size: 560px;
+        @include screen-400 {
+          padding: 14px 28px;
+        }
+      }
+    }
+  }
+}
 /********* blog standard page **********/
 .bsblog_left {
   ul.p {
@@ -117,7 +129,7 @@
       padding: 18px;
       border: none;
       background: #f9f9f9;
-      border: 1px solid var(--light_text);
+      border: 1px solid #bdbdbd70;
       border-right: 0;
       border-radius: 10px 0 0 10px;
     }
@@ -156,7 +168,7 @@
         span {
           width: 23px;
           height: 23px;
-          background: var(--muddy);
+          background: var(--dark);
           color: white;
         }
       }
@@ -225,15 +237,21 @@
     font-size: 20px;
   }
   ul {
+    @include screen-768 {
+      gap: 5px !important;
+    }
     li {
       display: inline-block;
-      background: white;
+      background: var(--offwhite);
       color: var(--text);
       border-radius: 5px;
       padding: 8px 25px;
       font-weight: 500;
       cursor: pointer;
       text-transform: uppercase;
+      @include screen-768 {
+        padding: 5px 20px;
+      }
     }
   }
 }
@@ -243,15 +261,28 @@
     font-size: 20px;
   }
   ul {
+    @include screen-768 {
+      gap: 8px !important;
+    }
     li {
       &:hover {
         a {
-          color: var(--orange);
+          color: var(--white);
+          background: var(--orange);
+          box-shadow: 3px 4px 19px #f387048c;
         }
       }
       a {
+        background: var(--offwhite);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
         color: var(--dark);
         transition: var(--transition);
+        @include screen-768 {
+          width: 40px;
+          height: 40px;
+        }
       }
     }
   }
