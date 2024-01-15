@@ -1,7 +1,32 @@
 /***** banner part ******/
 .header_title {
   padding-bottom: 440px;
+  h2 {
+    display: inline;
+  }
 }
+.typed::after {
+  content: "|";
+  display: inline;
+  animation: blink 0.7s infinite;
+}
+
+.typed-cursor {
+  opacity: 0;
+  display: none;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .banner_mail {
   position: absolute;
   right: 89%;

@@ -265,5 +265,28 @@
     });
 
 
+    // 11. typed js
+    $(function () {
+        $(".typed").typed({
+            strings: ["UX/UI Designer.", "Web Developer.", "Graphics Desiger.", "Digital Marketer."],
+            stringsElement: null,
+            typeSpeed: 30,
+            startDelay: 1200,
+            backSpeed: 20,
+            backDelay: 500,
+            loop: true,
+            loopCount: 5,
+            showCursor: false,
+            cursorChar: "|",
+            attr: null,
+            contentType: 'html',
+            callback: function () { },
+            preStringTyped: function () { },
+            onStringTyped: function () { },
+            resetCallback: function () { }
+        });
+    });
+
+
 })(jQuery)
 

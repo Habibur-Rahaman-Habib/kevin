@@ -721,12 +721,12 @@ p {
         padding-left: 5px; }
       .main_menu ul li ul li a {
         padding: 0;
-        padding-bottom: 7px;
+        padding-bottom: 10px;
         -webkit-transition: var(--transition);
         -o-transition: var(--transition);
         transition: var(--transition); }
       .main_menu ul li ul li + li a {
-        padding-top: 5px; }
+        padding-top: 10px; }
 
 .header_contact {
   margin-top: 20px; }
@@ -1319,6 +1319,34 @@ footer .thum {
 /***** banner part ******/
 .header_title {
   padding-bottom: 440px; }
+  .header_title h2 {
+    display: inline; }
+
+.typed::after {
+  content: "|";
+  display: inline;
+  -webkit-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+.typed-cursor {
+  opacity: 0;
+  display: none; }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .banner_mail {
   position: absolute;
