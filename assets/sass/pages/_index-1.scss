@@ -1,3 +1,178 @@
+/***** banner part ******/
+.header_title {
+  padding-bottom: 440px;
+}
+.banner_mail {
+  position: absolute;
+  right: 89%;
+  transform: rotate(-90deg);
+  top: 50%;
+  z-index: 55;
+  &:hover {
+    color: var(--orange);
+  }
+  @include screen-1199 {
+    right: 87%;
+  }
+  @include screen-992 {
+    right: 85%;
+  }
+  @include screen-768 {
+    display: none;
+  }
+}
+.banner_social {
+  ul {
+    position: absolute;
+    left: 94%;
+    top: 30%;
+    z-index: 55;
+    @include screen-1199 {
+      left: 92%;
+      top: 36%;
+    }
+    @include screen-768 {
+      left: 88%;
+    }
+    @include screen-460 {
+      left: 85%;
+    }
+    li {
+      & + li {
+        margin-top: 10px;
+      }
+      &:hover {
+        a {
+          color: var(--white);
+          &::before {
+            transform: scale(1);
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+      a {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid var(--dark);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--dark);
+        transition: var(--transition);
+        position: relative;
+        z-index: 1;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: var(--dark);
+          border-radius: 50%;
+          z-index: -1;
+          transform: scale(0.5);
+          transition: var(--transition);
+          visibility: hidden;
+          opacity: 0;
+        }
+        @include screen-460 {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  margin-top: -400px;
+  .banner_img {
+    position: relative;
+    z-index: 4;
+    @include screen-1199 {
+      margin-bottom: 25px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 86%;
+      border: 2px dotted white;
+      background: #ffffff21;
+      bottom: 0;
+      z-index: -1;
+      border-radius: 50%;
+      animation: spin 9s infinite linear;
+      left: 1px;
+    }
+  }
+}
+
+/***** scrolling part ******/
+.ur-ticker-area {
+  width: 102%;
+  position: absolute;
+  top: 53%;
+  z-index: 2;
+  transform: rotate(5deg);
+  left: -20px;
+  @include screen-1199 {
+    position: inherit;
+    transform: rotate(0deg);
+    left: 0;
+  }
+  .ur-ticker-wrapper {
+    box-sizing: content-box;
+    width: 100%;
+    padding-left: 100%;
+    .ur-ticker {
+      display: inline-block;
+      white-space: nowrap;
+      padding: 20px 0;
+      animation: 30s ticker linear infinite;
+      box-sizing: content-box;
+      padding-right: 100%;
+      &:hover {
+        animation-play-state: paused;
+      }
+      span {
+        font-size: 30px;
+        color: var(--white);
+        font-weight: 500;
+        position: relative;
+        display: inline-block;
+        transition: var(--transition);
+        @include screen-992 {
+          font-size: 18px;
+        }
+        &:hover {
+          transform: translateY(-6px);
+        }
+        &:nth-child(even) {
+          margin-left: 15px;
+        }
+        &:nth-child(odd) {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
+
+.ur-ticker-area2 {
+  z-index: 3;
+  transform: rotate(-5deg);
+  @include screen-1199 {
+    transform: rotate(0deg);
+  }
+  .ur-ticker-wrapper {
+    .ur-ticker {
+      animation: 30s ticker2 linear infinite reverse;
+    }
+  }
+}
+
 /***** about part ******/
 .about_single {
   border-color: var(--dark) !important;
