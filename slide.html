@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
+  <!-- <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" /> -->
+
+  <style>
+    .slider-container {
+      position: relative;
+      width: 400px;
+      margin: auto;
+    }
+
+    .slides {
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      color: white;
+      background-color: #3498db;
+    }
+
+    .dots-container,
+    .timer {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .dots-container {
+      right: 10px;
+    }
+
+    .dot {
+      height: 15px;
+      width: 15px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .timer {
+      left: 10px;
+      font-size: 18px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="slider-container">
+    <div class="slides">
+      <div>Slide 1</div>
+      <div>Slide 2</div>
+      <div>Slide 3</div>
+      <div>Slide 4</div>
+      <div>Slide 5</div>
+    </div>
+    <div class="dots-container" id="dots-container"></div>
+    <div class="timer" id="timer">0s 0ms</div>
+  </div>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/slick.js"></script>
+
+
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
+  <script>
+
+    $(document).ready(function () {
+      let slideIndex = 0;
+      let timerSeconds = 0;
+      let timerMilliseconds = 0;
+
+      function updateTimerDisplay() {
+        $('#timer').text(`${timerSeconds}s ${timerMilliseconds}ms`);
+      }
+
+      function startSlideInterval() {
+        return setInterval(() => {
+          // Update the timer
+          timerMilliseconds += 100;
+          if (timerMilliseconds >= 1000) {
+            timerSeconds++;
+            timerMilliseconds = 0;
+          }
+
+          updateTimerDisplay();
+
+          // Restart the timer after 10 seconds and slide to the next one
+          if (timerSeconds >= 10) {
+            timerSeconds = 0;
+            timerMilliseconds = 0;
+            $('.slides').slick('slickNext');
+          }
+        }, 100);
+      }
+
+      $('.slides').slick({
+        vertical: true,
+        dots: true,
+        arrows: false,
+        dotsClass: 'dots-container',
+        customPaging: function (slider, i) {
+          return '<div class="dot"></div>';
+        },
+        speed: 1000, // transition speed in milliseconds (10 seconds)
+        autoplay: false,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              vertical: false,
+            }
+          }
+        ],
+      });
+
+      let slideInterval = startSlideInterval();
+
+      $('.dots-container .dot').on('click', function () {
+        clearInterval(slideInterval);
+        slideIndex = $(this).index();
+        timerSeconds = 0;
+        timerMilliseconds = 0;
+        updateTimerDisplay();
+        slideInterval = startSlideInterval();
+      });
+
+      $('.slider-container').hover(
+        function () {
+          clearInterval(slideInterval);
+        },
+        function () {
+          slideInterval = startSlideInterval();
+        }
+      );
+    });
+
+
+  </script>
+
+
+</body>
+
+</html>

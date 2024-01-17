@@ -14,6 +14,9 @@ footer {
   b {
     color: white;
     font-size: 52px;
+    @include screen-400 {
+      font-size: 45px;
+    }
   }
   .slick-slide {
     b {
@@ -90,6 +93,9 @@ footer {
       border-radius: 15px;
       border: none;
       color: white;
+      @include screen-400 {
+        padding: 15px 35px;
+      }
     }
     textarea {
       border-radius: 20px;
@@ -98,6 +104,9 @@ footer {
       padding: 30px;
       &:focus-visible {
         outline: 1px solid gray;
+      }
+      @include screen-400 {
+        rows: 4 !important;
       }
     }
     button {

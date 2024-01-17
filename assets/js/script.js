@@ -287,6 +287,92 @@
         });
     });
 
+    // 12. protfolio verticle slider
+    $(document).ready(function () {
+        let slideIndex = 0;
+        let timerSeconds = 0;
+        let timerMilliseconds = 0;
+
+        function updateTimerDisplay() {
+            $('#timer').text(`${timerSeconds} . ${timerMilliseconds}`);
+        }
+
+        function startSlideInterval() {
+            return setInterval(() => {
+                // Update the timer
+                timerMilliseconds += 100;
+                if (timerMilliseconds >= 1000) {
+                    timerSeconds++;
+                    timerMilliseconds = 0;
+                }
+
+                updateTimerDisplay();
+
+                // Restart the timer after 10 seconds and slide to the next one
+                if (timerSeconds >= 5) {
+                    timerSeconds = 0;
+                    timerMilliseconds = 0;
+                    $('.slides').slick('slickNext');
+                }
+            }, 100);
+        }
+
+        $('.slides').slick({
+            slidesToShow: 4,
+            vertical: true,
+            dots: true,
+            arrows: false,
+            dotsClass: 'dots-container',
+            customPaging: function (slider, i) {
+                return '<div class="dot"></div>';
+            },
+            speed: 500, // transition speed in milliseconds (10 seconds)
+            autoplay: false,
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        vertical: false,
+                        slidesToShow: 1,
+                    }
+
+                }
+            ],
+        });
+
+        let slideInterval = startSlideInterval();
+
+        $('.dots-container .dot').on('click', function () {
+            clearInterval(slideInterval);
+            slideIndex = $(this).index();
+            timerSeconds = 0;
+            timerMilliseconds = 0;
+            updateTimerDisplay();
+            slideInterval = startSlideInterval();
+        });
+
+        $('.slider-container').hover(
+            function () {
+                clearInterval(slideInterval);
+            },
+            function () {
+                slideInterval = startSlideInterval();
+            }
+        );
+    });
+
 
 })(jQuery)
 
