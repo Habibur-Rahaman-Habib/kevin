@@ -59,12 +59,36 @@
 }
 
 /****** portfolio slider *****/
-
+.slider-container {
+  @include screen-1199 {
+    position: relative;
+    padding-bottom: 50px;
+  }
+  @include screen-575 {
+    padding-bottom: 20px;
+  }
+}
 .slides {
+  position: inherit;
   .single_slide {
     position: relative;
     height: 600px;
     margin-bottom: 20px;
+    @include screen-1400 {
+      height: 550px;
+    }
+    @include screen-1199 {
+      height: 500px;
+    }
+    @include screen-992 {
+      height: 400px;
+    }
+    @include screen-575 {
+      height: 300px;
+    }
+    @include screen-400 {
+      height: 250px;
+    }
     &:hover {
       .single_content {
         visibility: visible;
@@ -119,19 +143,36 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  left: 10px;
+  font-size: 30px;
+  color: var(--white);
+  top: 14%;
+  border-bottom: 1px solid;
+  padding-left: 60px;
+  @include screen-575 {
+    padding-left: 0;
+    top: 10%;
+  }
 }
+
 .dots-container {
   position: absolute;
   top: 6%;
-  left: 113%;
-  @media (max-width: 1800px) {
-    left: 110%;
+  right: 70px;
+  @media (max-width: 1550px) {
+    right: 5px;
   }
-  @media (max-width: 1700px) {
-    left: 107%;
+  @include screen-1199 {
+    top: inherit;
+    bottom: -65px;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    gap: 10px;
   }
-  @media (max-width: 1600px) {
-    left: 104%;
+  @include screen-575 {
+    bottom: -50px;
   }
   li {
     .dot {
@@ -154,6 +195,10 @@
         border-radius: 50%;
         background: var(--white);
       }
+      @include screen-575 {
+        width: 40px;
+        height: 40px;
+      }
     }
     &.slick-active {
       .dot {
@@ -164,13 +209,4 @@
       }
     }
   }
-}
-
-.timer {
-  left: 10px;
-  font-size: 30px;
-  color: var(--white);
-  top: 14%;
-  border-bottom: 1px solid;
-  padding-left: 60px;
 }
