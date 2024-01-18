@@ -86,7 +86,22 @@
 }
 
 .header_contact {
-  margin-top: 20px;
+  padding-top: 20px;
+  height: 100%;
+  border-left: 1px solid #d9d9d9;
+  margin-left: 145px;
+  @media (max-width: 1800px) {
+    margin-left: 120px;
+  }
+  @media (max-width: 1670px) {
+    margin-left: 100px;
+  }
+  @media (max-width: 1550px) {
+    margin-left: 80px;
+  }
+  @media (max-width: 1440px) {
+    margin-left: 50px;
+  }
 }
 
 .mobile_menu_bar {
