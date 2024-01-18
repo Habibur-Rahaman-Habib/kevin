@@ -42,6 +42,7 @@
         slidesToShow: 2,
         arrows: false,
         dots: true,
+        autoplay: true,
         customPaging: function (slider, i) {
             return '<span></span>';
         },

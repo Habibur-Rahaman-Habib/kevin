@@ -11,6 +11,7 @@ Version: 1.0.0
 :root {
   --kanit: "Kanit", sans-serif;
   --orange: #f27044;
+  --muddy: #f27044;
   --dark: #100e10;
   --white: white;
   --transition: 0.3s all linear;
@@ -710,7 +711,10 @@ p {
     -ms-flex-align: start;
     align-items: flex-start;
     gap: 0;
-    z-index: 2; }
+    z-index: 2;
+    background: url("../images/banner/bg2.png") no-repeat;
+    background-size: cover;
+    background-position: left; }
     .main_menu ul li ul li {
       width: 100%; }
       .main_menu ul li ul li:hover a {
