@@ -11,7 +11,8 @@
     8. Button Hover js
     9. Service Hover Function
     10. counter UP
-
+    11. type js
+    12. portfolio vertical slider with timer
     */
 
 
@@ -31,9 +32,9 @@
     });
 
     //2. Preloader
-    // setTimeout(() => {
-    //     $('.preloader').fadeOut()
-    // }, 2000);
+    setTimeout(() => {
+        $('.preloader').fadeOut()
+    }, 1800);
 
     // 3. page  slider
 
@@ -172,11 +173,8 @@
         ]
     });
 
-
-
     //4. Fancybox
     Fancybox.bind("[data-fancybox]", {});
-
 
     //5. wow js
     new WOW().init();
@@ -187,7 +185,6 @@
         itemSelector: '.grid-item',
         percentPosition: true,
     });
-
 
     $('.portfolio_button').on('click', 'button', function () {
         var filterValue = $(this).attr('data-filter');
@@ -264,7 +261,6 @@
             time: 1500
         });
     });
-
 
     // 11. typed js
     $(function () {

@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--dark);
+  background-color: var(--white);
   z-index: 200;
   display: flex;
   align-items: center;
@@ -15,55 +15,57 @@
   z-index: 99;
 }
 
-#bars6 {
+#square5 {
   display: block;
   position: absolute;
   top: 50%;
   left: 50%;
+  height: 60px;
+  width: 60px;
+  margin: -25px 0 0 -25px;
 }
 
-#bars6 span {
-  position: absolute;
-  display: block;
-  animation: bars6 1.5s infinite ease-in-out;
-  bottom: 10px;
-  width: 17px;
-  height: 10px;
-  background: rgba(0, 0, 0, 0.25);
+#square5 span {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  animation: square5 1.7s infinite ease-in-out both;
 }
 
-#bars6 span:nth-child(2) {
-  left: 20px;
+#square5 span:nth-child(1) {
+  left: 11px;
   animation-delay: 0.2s;
+  background: #f27044;
 }
 
-#bars6 span:nth-child(3) {
-  left: 40px;
+#square5 span:nth-child(2) {
+  left: 22px;
   animation-delay: 0.4s;
+  background: #100e10;
 }
 
-#bars6 span:nth-child(4) {
-  left: 60px;
+#square5 span:nth-child(3) {
+  left: 33px;
   animation-delay: 0.6s;
+  background: #100e10;
 }
 
-#bars6 span:nth-child(5) {
-  left: 80px;
+#square5 span:nth-child(4) {
+  left: 44px;
   animation-delay: 0.8s;
+  background: #f27044;
 }
 
-@keyframes bars6 {
-  0%,
-  100%,
-  50% {
-    height: 10px;
-    transform: translateY(0);
-    background: rgba(0, 0, 0, 0.25);
+@keyframes square5 {
+  0% {
+    transform: rotateY(0);
   }
 
-  25% {
-    height: 60px;
-    transform: translateY(15px);
-    background: white;
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateX(180deg);
   }
 }
