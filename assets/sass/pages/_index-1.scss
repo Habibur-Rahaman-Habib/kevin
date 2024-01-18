@@ -436,13 +436,13 @@ h4[data-value]:after {
   @include screen-992 {
     height: 450px;
   }
-  @include screen-400 {
+  @include screen-768 {
     height: 400px;
   }
-  @media (max-width: 350px) {
+  @include screen-400 {
     height: 350px;
   }
-  @media (max-width: 300px) {
+  @media (max-width: 350px) {
     height: 300px;
   }
   &:hover {
@@ -642,6 +642,9 @@ h4[data-value]:after {
   .hand {
     bottom: 0;
     left: 0;
+    @media (max-width: 1695px) {
+      display: none;
+    }
   }
 }
 .hire_downlaod {
@@ -670,6 +673,9 @@ h4[data-value]:after {
   .white_btn {
     padding: 15px 35px;
     background-size: 560px;
+    @include screen-768 {
+      padding: 12px 25px;
+    }
   }
 }
 
@@ -766,6 +772,10 @@ h4[data-value]:after {
     bottom: -1px;
     transform: translateX(-50%);
     width: 540px;
+    @include screen-1199 {
+      left: 80%;
+      width: 358px;
+    }
   }
 }
 
@@ -855,6 +865,10 @@ h4[data-value]:after {
     font-size: 24px;
     &:hover {
       background: var(--dark);
+    }
+    @include screen-1199 {
+      width: 50px;
+      height: 50px;
     }
   }
 }

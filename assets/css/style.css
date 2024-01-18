@@ -306,10 +306,10 @@ p {
       padding: 100px 0; } }
   @media (max-width: 1300px) {
     .ptb-120 {
-      padding: 80px 0; } }
+      padding: 90px 0; } }
   @media (max-width: 1199.98px) {
     .ptb-120 {
-      padding: 60px 0; } }
+      padding: 70px 0; } }
   @media (max-width: 767.98px) {
     .ptb-120 {
       padding: 50px 0; } }
@@ -321,10 +321,10 @@ p {
       padding-top: 100px; } }
   @media (max-width: 1300px) {
     .pt-120 {
-      padding-top: 80px; } }
+      padding-top: 90px; } }
   @media (max-width: 1199.98px) {
     .pt-120 {
-      padding-top: 60px; } }
+      padding-top: 70px; } }
   @media (max-width: 767.98px) {
     .pt-120 {
       padding-top: 50px; } }
@@ -336,10 +336,10 @@ p {
       padding-bottom: 100px; } }
   @media (max-width: 1300px) {
     .pb-120 {
-      padding-bottom: 80px; } }
+      padding-bottom: 90px; } }
   @media (max-width: 1199.98px) {
     .pb-120 {
-      padding-bottom: 60px; } }
+      padding-bottom: 70px; } }
   @media (max-width: 767.98px) {
     .pb-120 {
       padding-bottom: 50px; } }
@@ -1764,13 +1764,13 @@ h4[data-value]:after {
   @media (max-width: 991.98px) {
     .portfolio_item {
       height: 450px; } }
-  @media (max-width: 400px) {
+  @media (max-width: 767.98px) {
     .portfolio_item {
       height: 400px; } }
-  @media (max-width: 350px) {
+  @media (max-width: 400px) {
     .portfolio_item {
       height: 350px; } }
-  @media (max-width: 300px) {
+  @media (max-width: 350px) {
     .portfolio_item {
       height: 300px; } }
   .portfolio_item:hover .imgs {
@@ -1940,6 +1940,9 @@ h4[data-value]:after {
   .we_do .hand {
     bottom: 0;
     left: 0; }
+    @media (max-width: 1695px) {
+      .we_do .hand {
+        display: none; } }
 
 .hire_downlaod .white.fsb:hover {
   color: var(--orange); }
@@ -1970,6 +1973,9 @@ h4[data-value]:after {
 .hire_downlaod .white_btn {
   padding: 15px 35px;
   background-size: 560px; }
+  @media (max-width: 767.98px) {
+    .hire_downlaod .white_btn {
+      padding: 12px 25px; } }
 
 @keyframes hire {
   0% {
@@ -2103,6 +2109,10 @@ h4[data-value]:after {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 540px; }
+  @media (max-width: 1199.98px) {
+    .wedo_right .what {
+      left: 80%;
+      width: 358px; } }
 
 /***** blog part ******/
 .blog_single {
@@ -2181,6 +2191,11 @@ h4[data-value]:after {
   .blog_slider .prev-arrow:hover,
   .blog_slider .next-arrow:hover {
     background: var(--dark); }
+  @media (max-width: 1199.98px) {
+    .blog_slider .prev-arrow,
+    .blog_slider .next-arrow {
+      width: 50px;
+      height: 50px; } }
 
 .blog_slider .prev-arrow {
   right: 50.5%; }
