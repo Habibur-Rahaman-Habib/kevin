@@ -652,6 +652,9 @@ p {
 .logo a {
   display: block;
   padding: 24px 0; }
+  @media (max-width: 575.98px) {
+    .logo a {
+      padding: 11px 0; } }
 
 .main_menu ul {
   display: -webkit-box;
@@ -745,7 +748,9 @@ p {
 
 /* for sticky header */
 .fixed_menu {
-  background: var(--dark);
+  background: url("../images/banner/bg2.png") no-repeat;
+  background-size: cover;
+  background-position: left;
   -webkit-animation: sticky 1s;
   animation: sticky 1s;
   -webkit-transition: 0.2s;
@@ -1167,6 +1172,9 @@ footer .thum {
   vertical-align: middle;
   border: 1px solid var(--light_text);
   padding: 20px 14px; }
+  @media (max-width: 575.98px) {
+    .header_toggle_btn {
+      padding: 16px 14px; } }
   .header_toggle_btn:active {
     border-color: transparent !important; }
   .header_toggle_btn:hover {

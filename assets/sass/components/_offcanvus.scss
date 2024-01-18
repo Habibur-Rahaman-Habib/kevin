@@ -2,6 +2,9 @@
   vertical-align: middle;
   border: 1px solid var(--light_text);
   padding: 20px 14px;
+  @include screen-575 {
+    padding: 16px 14px;
+  }
   &:active {
     border-color: transparent !important;
   }

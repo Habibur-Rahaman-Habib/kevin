@@ -3,6 +3,9 @@
   a {
     display: block;
     padding: 24px 0;
+    @include screen-575 {
+      padding: 11px 0;
+    }
   }
 }
 .main_menu {
@@ -95,7 +98,9 @@
 
 /* for sticky header */
 .fixed_menu {
-  background: var(--dark);
+  background: url("../images/banner/bg2.png") no-repeat;
+  background-size: cover;
+  background-position: left;
   animation: sticky 1s;
   transition: 0.2s;
   position: fixed;
