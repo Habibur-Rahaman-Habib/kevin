@@ -703,7 +703,7 @@ p {
     -webkit-transition: var(--transition);
     -o-transition: var(--transition);
     transition: var(--transition);
-    top: 110%;
+    top: 108%;
     left: 0;
     width: 230px;
     -webkit-box-orient: vertical;
