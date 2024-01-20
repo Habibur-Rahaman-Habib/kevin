@@ -13,6 +13,7 @@
     10. counter UP
     11. type js
     12. portfolio vertical slider with timer
+    13. running progress bar
     */
 
 
@@ -355,6 +356,40 @@
                 slideInterval = startSlideInterval();
             }
         );
+    });
+
+    // 13. running progress bar
+    document.addEventListener("DOMContentLoaded", function () {
+        var loadingBarContainer = document.getElementById("loading-bar-container");
+        var loadingBar = document.getElementById("loading-bar");
+        var progressBarSection = document.getElementById("progress-bar-section");
+
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    loadingBar.style.width = "100%";
+                    setTimeout(function () {
+                        loadingBarContainer.style.display = "none";
+                        updateSkillProgress();
+                    }, 300);
+                    observer.disconnect(); // Stop observing once triggered
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(progressBarSection);
+
+        function updateSkillProgress() {
+            var skillBars = document.querySelectorAll(".skill-progress-bar");
+            skillBars.forEach(function (bar) {
+                var skillPercent = bar.getAttribute("data-skill-percent");
+                var percentageLabel = bar.parentElement.querySelector(".percentage-label");
+
+                bar.style.width = skillPercent + "%";
+                percentageLabel.innerHTML = skillPercent + "%";
+                percentageLabel.style.left = skillPercent + "%";
+            });
+        }
     });
 
 
