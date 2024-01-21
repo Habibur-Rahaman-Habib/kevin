@@ -387,7 +387,7 @@
 
                 bar.style.width = skillPercent + "%";
                 percentageLabel.innerHTML = skillPercent + "%";
-                percentageLabel.style.left = skillPercent + "%";
+                percentageLabel.style.left = "calc(" + skillPercent + "% - 60px)";
             });
         }
     });
