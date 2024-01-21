@@ -10,8 +10,8 @@ Version: 1.0.0
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
 :root {
   --kanit: "Kanit", sans-serif;
-  --orange: #f27044;
-  --muddy: #f27044;
+  --orange: #f37044;
+  --muddy: #f37044;
   --dark: #100e10;
   --white: white;
   --transition: 0.3s all linear;
@@ -352,7 +352,7 @@ p {
       padding-right: 60px; } }
   @media (max-width: 1399.98px) {
     .pr-75 {
-      padding-right: 50px; } }
+      padding-right: 40px; } }
   @media (max-width: 1199.98px) {
     .pr-75 {
       padding-right: 30px; } }
@@ -367,7 +367,7 @@ p {
       padding-left: 60px; } }
   @media (max-width: 1399.98px) {
     .pl-75 {
-      padding-left: 50px; } }
+      padding-left: 40px; } }
   @media (max-width: 1199.98px) {
     .pl-75 {
       padding-left: 30px; } }
@@ -747,7 +747,7 @@ p {
       margin-left: 80px; } }
   @media (max-width: 1440px) {
     .header_contact {
-      margin-left: 50px; } }
+      margin-left: 30px; } }
 
 .mobile_menu_bar {
   height: 100%;
@@ -878,9 +878,9 @@ p {
 /****** btn design start ******/
 .org_btn {
   color: #fff;
-  background-image: -webkit-linear-gradient(60deg, #f38704 50%, transparent 50%);
-  background-image: -o-linear-gradient(60deg, #f38704 50%, transparent 50%);
-  background-image: linear-gradient(30deg, #f38704 50%, transparent 50%);
+  background-image: -webkit-linear-gradient(60deg, #f37044 50%, transparent 50%);
+  background-image: -o-linear-gradient(60deg, #f37044 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #f37044 50%, transparent 50%);
   background-size: 500px;
   background-repeat: no-repeat;
   background-position: 0%;
@@ -894,8 +894,8 @@ p {
   padding: 13px 34px;
   border-radius: 10px;
   font-weight: 500;
-  -webkit-box-shadow: 3px 4px 19px #f387048c;
-  box-shadow: 3px 4px 19px #f387048c;
+  -webkit-box-shadow: 3px 4px 19px #ff57228a;
+  box-shadow: 3px 4px 19px #ff57228a;
   border: 1px solid var(--orange); }
   .org_btn:hover {
     border: 1px solid var(--orange);
@@ -1159,19 +1159,32 @@ footer .thum {
 /*****  scroll to top *****/
 .scroll-top-btn {
   width: 45px;
-  height: 50px;
+  height: 53px;
   background-color: var(--muddy);
-  color: var(--dark);
-  border-radius: 4px;
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 10;
-  font-size: 15px;
+  color: var(--white);
+  border-radius: 6px;
+  font-size: 20px;
   font-weight: 500;
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
-  transition: var(--transition); }
+  transition: var(--transition);
+  -webkit-box-shadow: 0px 0px 20px #f3704454;
+  box-shadow: 0px 0px 20px #f3704454; }
+  @media (max-width: 1199.98px) {
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      z-index: 10;
+      width: 40px;
+      height: 50px; } }
+  @media (max-width: 767.98px) {
+    .scroll-top-btn {
+      width: 35px;
+      height: 40px;
+      font-size: 15px;
+      right: 20px;
+      background-color: #f37044c9; } }
   .scroll-top-btn:hover {
     -webkit-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
@@ -1312,6 +1325,10 @@ footer .thum {
     .offcanvas-backdrop {
       top: 10px;
       left: 10px; } }
+
+.mobile-menu .org_btn {
+  padding: 10px 30px;
+  font-size: 15px; }
 
 .breadcum {
   padding: 70px 0; }
@@ -1631,6 +1648,10 @@ footer .thum {
   border-radius: 50%; }
   .visit_contact .vc.white_bg {
     margin-left: -20px; }
+  @media (max-width: 400px) {
+    .visit_contact .vc {
+      width: 135px;
+      height: 135px; } }
 
 .skill_count {
   left: 0;
@@ -1638,9 +1659,8 @@ footer .thum {
   background: url("../images/banner/bg2.png") no-repeat;
   background-size: cover;
   background-position: center;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content; }
+  width: 480px;
+  max-width: 100%; }
   @media (max-width: 1199.98px) {
     .skill_count {
       left: 50%;
@@ -1802,11 +1822,11 @@ footer .thum {
     height: 100%;
     -webkit-transition: 0.3s all linear;
     -o-transition: 0.3s all linear;
-    transition: 0.3s all linear; }
-    .portfolio_item .imgs img {
-      width: 100%;
-      height: 100%;
-      border-radius: 15px; }
+    transition: 0.3s all linear;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden; }
   .portfolio_item .por_content {
     position: absolute;
     bottom: 6%;
